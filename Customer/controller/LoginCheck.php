@@ -1,6 +1,7 @@
 <?php
 	session_start();
 
+
 	if(isset($_POST['submit'])){
 
 		$username= $_POST['username'];
@@ -19,26 +20,46 @@
 
     //sql statement
 
-    $sql="SELECT * FROM `registration` WHERE username='$username' && password='$password'";
+    $sql= "SELECT * FROM `registration` WHERE 'username'='$username' && 'password'='$password' ";
 
-    //Db_connection
-    require_once("../model/conn.php");
+   
+     //Db_connection
+     require_once("../model/conn.php");
 
-
-    $query=mysqli_query($conn, $sql) or die("Login error");
+    $query=mysqli_query($conn, $sql) or die("Login problem") ;
     $count=mysqli_num_rows($query);
 
     if($count==1)
     {
-      $_SESSION['user']=$username;
+      
+          //       if(trim($user[2]) == $username && trim($user[3])== $password)
+          //      {
+          //           setcookie('flag' , 'true', time()+3600 ,'/');
+					//  header('location: ../view/home.php');
 
+          //       }
+      // echo "login success";
+      //$_SESSION['user']=$username;
+      // setcookie('flag' , 'true', time()+3600 ,'/');
+      //  				 header('location: ../view/home.php');
      header("location:../view/home.php");
     }
+    
+ // }
+  // else{
+  //   echo "NOT checked";
   }
 
     }
 
-          //   $file=fopen('registers.txt','r');
+    else{
+      	echo "invalid request...";
+      }
+
+      ?>
+    
+    
+    <?php//   $file=fopen('registers.txt','r');
            
 
           //   while (!feof($file))//jokhon na file ta shesh hobe loop cholte thakte

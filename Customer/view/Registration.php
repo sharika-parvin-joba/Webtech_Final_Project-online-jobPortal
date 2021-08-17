@@ -35,14 +35,24 @@ text-align: center;
 
 
 }
+
+#r{
+    background-image:url('images.jpg');
+    background-repeat:no-repeat;
+    /* //background-position:center; */
+    
+    background-size:cover;
+}
+
+
     </style>
     <title>  Registration</title>
 </head>
-<body >
+<body id='r'>
     
    
-        <table>
-        <table border="1" height="400" width=800 id='registration'>
+        <table >
+        <table  border='4' height="400" width=800 id='registration'>
          <thead align="right">
         <tr>
         <th>

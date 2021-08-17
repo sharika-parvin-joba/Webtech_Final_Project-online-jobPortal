@@ -41,7 +41,7 @@
 <?php
 	
 	}else{
-		header('location: ../view/Login.php');
+		//header('location: ../view/Login.php');
 	}
 ?>
 

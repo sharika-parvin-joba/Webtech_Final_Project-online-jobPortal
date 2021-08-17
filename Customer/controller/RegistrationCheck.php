@@ -3,7 +3,7 @@
 <?php
 
 
-	session_start();
+	//session_start();
 
 	if(isset($_POST['submit'])){
         
@@ -19,8 +19,8 @@
 
 		if($name != '' && $password != '' && $username != '' ){
    
-			$user =['name'=> $name, 'email'=>$email, 'username'=> $username, 'password'=>$password, 'confirmpassword'=>$confirmpassword,'add'=>$address,'dos'=>$startingdate];
-			$_SESSION['user'] = $user;
+			// $user =['name'=> $name, 'email'=>$email, 'username'=> $username, 'password'=>$password, 'confirmpassword'=>$confirmpassword,'add'=>$address,'dos'=>$startingdate];
+			//$_SESSION['user'] = $user;
 //sql statement
     
      $sql="INSERT INTO `registration`( `name`, `email`, `username`, `password`, `confirmpassword`, `address`, `date of submit`) VALUES ('$name','$email','$username','$password','$confirmpassword','$address','$startingdate')";
